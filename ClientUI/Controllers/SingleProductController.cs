@@ -1,0 +1,85 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace ClientUI.Controllers
+{
+    public class SingleProductController : Controller
+    {
+
+        // GET: SingleProductController
+        [Route("/singleproduct")]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        // GET: SingleProductController/Details/5
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        // GET: SingleProductController/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: SingleProductController/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(IFormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: SingleProductController/Edit/5
+        public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        // POST: SingleProductController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, IFormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: SingleProductController/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: SingleProductController/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id, IFormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+    }
+}
